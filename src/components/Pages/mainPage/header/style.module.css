@@ -1,0 +1,17 @@
+.header {
+  width: auto;
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 125px 0px 100px;
+  background: linear-gradient(180deg, rgba(255, 185, 75, 0.75), rgb(253, 254, 255));
+}
+.Button {
+  background: linear-gradient(0deg, rgba(28, 115, 129, 1), rgba(255, 185, 75, 0.75));
+  border-radius: 0px;
+}
+
+.date_picker {
+  width: 0px !important;
+}

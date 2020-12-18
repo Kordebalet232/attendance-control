@@ -1,0 +1,9 @@
+.footer {
+  width: auto;
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 62px 0px 62px;
+  background: linear-gradient(0deg, rgba(255, 185, 75, 0.75), rgb(252, 253, 255));
+}

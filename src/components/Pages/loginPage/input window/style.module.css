@@ -1,0 +1,35 @@
+.InputContainer{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    height: 80%;
+    padding: 30px 10px 30px 10px;
+    margin: 12% 32% 12% 32%;
+    background: linear-gradient(320deg, rgb(248, 248, 248, 0%), rgb(248, 248, 248, 78%));
+}
+.Input1{
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.Input2{
+    background: white;
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.LinkButton{
+    color: #33546C;
+    opacity: 50%;
+    margin: 5px 10px 10px 10px;
+}
+.Button{
+    background: linear-gradient(0deg, rgba(28, 115, 129, 1), rgba(255, 185, 75, 0.75));
+    border-radius: 0px;
+}

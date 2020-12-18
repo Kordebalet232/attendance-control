@@ -1,0 +1,22 @@
+.InputContainer {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  height: 80%;
+  padding: 30px 0px 30px 0px;
+  margin: 12% 32% 12% 32%;
+  background: linear-gradient(320deg, rgb(248, 248, 248, 0%), rgb(248, 248, 248, 78%));
+}
+.Input {
+  background: white;
+  border-radius: 10px;
+  margin: 0px 10px 20px 10px;
+}
+.Button {
+  margin: 10px 10px 10px 10px;
+  background: linear-gradient(0deg, rgba(28, 115, 129, 1), rgba(255, 185, 75, 0.75));
+  border-radius: 0px;
+}
