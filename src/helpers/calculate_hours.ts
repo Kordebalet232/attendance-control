@@ -38,7 +38,7 @@ function calculateHours(workers: worker[], month: number, year: number): void {
       });
       id = id + 1;
       for (let j = 1; j < days; j++) {
-        if (workers[i].exits[j] === undefined || workers[i].enters[0] !== undefined) {
+        if (workers[i].exits[j] === undefined || workers[i].enters[j] === undefined) {
           workers[i].hours.push({ DisplayTime: "", id: id, letterDisplay: "" });
           id = id + 1;
         } else {
