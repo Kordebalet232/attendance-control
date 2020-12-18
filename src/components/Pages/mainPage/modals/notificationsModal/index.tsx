@@ -44,8 +44,8 @@ const NotificationsDialog = (props: Props) => {
 
   return (
     <div>
-      <Button variant="outlined" color="primary" style={{margin:"0px 10px 0px 10px"}} onClick={handleClickOpen}>
-        Уведомления
+      <Button variant="outlined" color="primary" style={{ margin: "0px 10px 0px 10px" }} onClick={handleClickOpen}>
+        {"Уведомления " + props.notifications.length}
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Уведомления</DialogTitle>

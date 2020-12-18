@@ -30,7 +30,7 @@ function* workerUserTable(action: Action) {
   const data = yield call(GetUserTable, action.token, action.id, action.year, action.month);
   console.log(data);
   if (data.workers[0] !== undefined) {
-    calculateHours(data.workers);
+    calculateHours(data.workers, action.month, action.year);
     checkGaps(data.workers);
   }
   if (data !== undefined) {
