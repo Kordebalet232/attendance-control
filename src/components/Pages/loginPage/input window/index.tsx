@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Button, Input, Typography } from "@material-ui/core";
 import React from "react";
 import style from "./style.module.css";
@@ -30,9 +29,13 @@ const InputWindow = (props: Props) => {
           id="password"
           required={true}
         />
-        <Link className={style.LinkButton} to="/recovery">
+        <Button
+          onClick={() => {
+            switchPage(props.history, "/recovery");
+          }}
+        >
           Забыли пароль?
-        </Link>
+        </Button>
       </div>
       <Button
         variant="contained"
