@@ -1,6 +1,7 @@
 import Axios from "axios";
 import { call, put, takeEvery } from "redux-saga/effects";
 import calculateHours from "../../helpers/calculate_hours";
+import checkVacations from "../../helpers/checkvacations";
 import checkGaps from "../../helpers/check_gaps";
 import switchPage from "../../helpers/PageSwitcher";
 import Action from "../../types/Action";
@@ -32,6 +33,7 @@ function* workerUserTable(action: Action) {
   if (data.workers[0] !== undefined) {
     calculateHours(data.workers, action.month, action.year);
     checkGaps(data.workers);
+    checkVacations(data.workers, action.year, action.month);
   }
   if (data !== undefined) {
     yield put(User_tableAC.setUser_Table(data));

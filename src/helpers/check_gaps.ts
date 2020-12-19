@@ -5,7 +5,8 @@ function checkGaps(workers: worker[]): void {
     workers[i].total_gaps = [];
     let total_gaps = [0, 0, 0, 0];
     for (let j = 0; j < workers[i].gaps.length; j++) {
-      console.log(workers[i].gaps[j].reason);
+      console.log(new Date(workers[i].gaps[j].date).getDate());
+      console.log(workers[i].hours);
       switch (workers[i].gaps[j].reason) {
         case 1: {
           workers[i].hours[new Date(workers[i].gaps[j].date).getDate() - 1].letterDisplay = "Е";
