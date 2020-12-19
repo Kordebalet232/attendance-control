@@ -1,4 +1,5 @@
 import React from "react";
+import switchPage from "../../../helpers/PageSwitcher";
 import { notification, worker } from "../../../types/user";
 import Footer from "./footer";
 import Header from "./header";
@@ -63,6 +64,11 @@ type Props = {
 };
 
 const MainPage = (props: Props) => {
+  React.useEffect(() => {
+    if (!props.isAuthed) {
+      switchPage(props.history, "/");
+    }
+  });
   const componentRef: React.RefObject<HTMLDivElement> = React.useRef<HTMLDivElement>(null);
   return (
     <div className={style.mainPage}>
