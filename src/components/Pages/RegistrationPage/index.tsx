@@ -15,13 +15,20 @@ type Props = {
     url_to_push: string
   ) => void;
   history: any;
+  textAlert: string;
+  alertCreator: (text: string) => void;
 };
 
 const RegistrationPage = (props: Props) => {
   return (
     <div className={style.regPage}>
       <Banner />
-      <InputWindow getTokenReg={props.getTokenReg} history={props.history} />
+      <InputWindow
+        getTokenReg={props.getTokenReg}
+        history={props.history}
+        textAlert={props.textAlert}
+        alertCreator={props.alertCreator}
+      />
     </div>
   );
 };

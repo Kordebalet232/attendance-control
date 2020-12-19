@@ -35,12 +35,17 @@ const InputWindow = (props: Props) => {
     month: number
   ) => {
     if (!passChecker(new_pass)) {
-      props.alertCreator("Некорректный пароль!");
+      props.alertCreator(
+        "Некорректный пароль.  " +
+          "пароль должен быть не короче 8 символов, содержать только латинские символы в обоих регистрах, и по крайней мере 1 спец символ и 1 цифру"
+      );
+    } else {
+      if (!checkPasswords(new_pass, check_pass)) {
+        props.alertCreator("Введенные пароли не совпадают");
+      } else {
+        props.setNewPass(new_pass, history, url_to_push, token, id, year, month);
+      }
     }
-    if (!checkPasswords(new_pass, check_pass)) {
-      props.alertCreator("Введенные пароли не совпадают");
-    }
-    props.setNewPass(new_pass, history, url_to_push, token, id, year, month);
   };
   return (
     <div className={style.InputContainer}>
@@ -53,7 +58,7 @@ const InputWindow = (props: Props) => {
         onClick={() => {
           updatePass(
             (document.getElementById("pass") as HTMLInputElement)!.value!,
-            (document.getElementById("pass") as HTMLInputElement)!.value!,
+            (document.getElementById("checkPass") as HTMLInputElement)!.value!,
             props.history,
             "/main",
             props.token,
