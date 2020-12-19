@@ -113,7 +113,7 @@ function CreateVacation(token: string, start_day: Date, end_date: Date, worker_i
   return {
     type: ACTION.GIVE_VACATION,
     token: token,
-    start_day: start_day,
+    start_date: start_day,
     end_date: end_date,
     worker_id: worker_id,
   };

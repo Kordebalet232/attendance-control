@@ -5,11 +5,24 @@ import ACTION from "../actionCreators/ACTION";
 import api_address from "./apiAddress";
 
 async function createVacation(token: string, start_date: Date, end_date: Date, worker_id: number) {
+  console.log(
+    token +
+      " " +
+      start_date.getFullYear() +
+      "-" +
+      (start_date.getMonth() + 1) +
+      "-" +
+      start_date.getDate() +
+      " " +
+      end_date.toString() +
+      " " +
+      worker_id
+  );
   return await Axios.post(
     api_address + "/vacation/",
     {
-      start_date: start_date,
-      end_date: end_date,
+      start_date: start_date.getFullYear() + "-" + (start_date.getMonth() + 1) + "-" + start_date.getDate(),
+      end_date: end_date.getFullYear() + "-" + (end_date.getMonth() + 1) + "-" + end_date.getDate(),
       worker: worker_id,
     },
     {
