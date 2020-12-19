@@ -22,12 +22,12 @@ const checkVacations = (workers: worker[], year: number, month: number) => {
           for (let k = start_date.getDate(); k <= end_date.getDate(); k++) {
             console.log(k);
             console.log(workers[i].hours);
-            workers[i].hours[k - 1] = { DisplayTime: "", id: workers[i].hours[k - 1].id, letterDisplay: "ОТ" };
+            workers[i].hours[k - 1] = { DisplayTime: "", id: workers[i].hours[k - 1].id, letterDisplay: "О" };
           }
         } else {
           for (let k = start_date.getDate(); k < days; k++) {
             // начало в рассатриваемом месяце, конец - в следующем
-            workers[i].hours[k - 1] = { DisplayTime: "", id: workers[i].hours[k - 1].id, letterDisplay: "ОТ" };
+            workers[i].hours[k - 1] = { DisplayTime: "", id: workers[i].hours[k - 1].id, letterDisplay: "О" };
           }
         }
       } else {
@@ -35,7 +35,7 @@ const checkVacations = (workers: worker[], year: number, month: number) => {
           // конец в рассматриваемом месяце, начало - в предыдущем
           for (let k = 0; k <= end_date.getDate(); k++) {
             console.log("Тут?");
-            workers[i].hours[k] = { DisplayTime: "", id: workers[i].hours[k].id, letterDisplay: "ОТ" };
+            workers[i].hours[k] = { DisplayTime: "", id: workers[i].hours[k].id, letterDisplay: "О" };
           }
         }
       }

@@ -19,7 +19,7 @@ function checkGaps(workers: worker[]): void {
           break;
         }
         case 3: {
-          workers[i].hours[new Date(workers[i].gaps[j].date).getDate() - 1].letterDisplay = "ОТ";
+          workers[i].hours[new Date(workers[i].gaps[j].date).getDate() - 1].letterDisplay = "О";
           total_gaps[2] = total_gaps[2] + 1;
           break;
         }

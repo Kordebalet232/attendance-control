@@ -37,7 +37,7 @@ function calculateHours(workers: worker[], month: number, year: number): void {
       total_hours = total_hours + hours;
       total_days = total_days + 1;
       workers[i].hours.push({
-        DisplayTime: hours.toFixed(2),
+        DisplayTime: hours.toFixed(1),
         id: id,
         letterDisplay: "Я",
       });
@@ -69,12 +69,12 @@ function calculateHours(workers: worker[], month: number, year: number): void {
           total_hours = total_hours + hours;
           total_days = total_days + 1;
           workers[i].hours.push({
-            DisplayTime: hours.toFixed(2),
+            DisplayTime: hours.toFixed(1),
             id: id,
             letterDisplay: "Я",
           });
           id = id + 1;
-          workers[i].total_hours = total_hours.toFixed(2);
+          workers[i].total_hours = total_hours.toFixed(1);
           workers[i].total_days = total_days;
           prevDay = new Date(workers[i].exits[j].time).getDate();
         }
