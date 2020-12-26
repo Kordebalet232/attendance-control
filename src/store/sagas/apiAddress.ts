@@ -1,3 +1,3 @@
-const api_address: string = "https://attendance-control-backend.herokuapp.com";
+const api_address: string = "http://localhost:8000";
 
 export default api_address;
